@@ -1,0 +1,17 @@
+{
+  "name": "advantagedemorepo",
+  "version": "1.0.0",
+  "description": "This is a demo code. This will demonstrate how to connect Xray Cucumber to an automation tool using tools like Jenkins for CI/CD We have used the Playwright automation tool for this purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.19"
+  }
+}
