@@ -1,3 +1,8 @@
 {
-    
+    "default":{
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "paths":["src/test/features/"]
+    }
 }
