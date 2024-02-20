@@ -22,8 +22,8 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: playwright-report
-        path: playwright-report/
+        name: ci-report
+        path: reports/playwright-report/
         retention-days: 30
     - name: Submit results to Xray
       env:
