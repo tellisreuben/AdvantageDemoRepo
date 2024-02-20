@@ -1,12 +1,12 @@
 import { Given, setDefaultTimeout } from "@cucumber/cucumber";
 import {chromium} from "@playwright/test"
 import {expect} from '@playwright/test';
-import { TIMEOUT } from "dns";
+
 
 
     setDefaultTimeout(60 * 1000);
     
-    const browser = await chromium.launch({headless:false});
+    const browser = await chromium.launch({headless:true});
     const page = await browser.newPage();
 
 Given('I log into AdvantageDemo', async function () {
