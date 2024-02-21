@@ -4,7 +4,7 @@ import {expect} from '@playwright/test';
 
 
     setDefaultTimeout(60 * 1000);
-    const browser = await chromium.launch({headless:false});
+    const browser = await chromium.launch({headless:true});
     const page = await browser.newPage();
     
 Before(async function() {
