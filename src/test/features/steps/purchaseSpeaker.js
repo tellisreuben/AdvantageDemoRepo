@@ -1,16 +1,22 @@
-import { Given, setDefaultTimeout } from "@cucumber/cucumber";
+import { After, Before, Given, setDefaultTimeout } from "@cucumber/cucumber";
 import {chromium} from "@playwright/test"
 import {expect} from '@playwright/test';
 
 
-
     setDefaultTimeout(60 * 1000);
-    
     const browser = await chromium.launch({headless:true});
     const page = await browser.newPage();
+    
+Before(async function() {
+    
+    
+})
+   
+      
+  
 
 Given('I log into AdvantageDemo', async function () {
-    
+   
     await page.goto('https://advantageonlineshopping.com/#/');
     await expect(page.getByRole('link',{name: 'UserMenu'})).toBeVisible();
     
@@ -39,7 +45,12 @@ Given('I log into AdvantageDemo', async function () {
     await password.fill('Advantage123');
 
     await page.getByText('LOGIN').click();
-  // await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
-   browser.close();
+    //await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
+    //await expect(page.locator('#signInResultMessage')).toBeVisible();
+   //browser.close();
   });
+
+  After(function(){
+    browser.close();
+  })
 
