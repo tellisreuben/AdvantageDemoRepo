@@ -1,4 +1,4 @@
-import { After, Before, Given, setDefaultTimeout } from "@cucumber/cucumber";
+import { After, Before, Given, Then, setDefaultTimeout } from "@cucumber/cucumber";
 import {chromium} from "@playwright/test"
 import {expect} from '@playwright/test';
 
@@ -26,6 +26,10 @@ Given('I log into AdvantageDemo', async function () {
   Given('I select the {string} option', async function (optionSelected) {
     await expect(page.getByLabel('SpeakersCategory', { exact: true })).toBeVisible();
     await page.getByLabel('SpeakersCategory', { exact: true }).click();
+    
+  });
+
+Then('I am able to checkout the selected speaker', async function() {
     await expect(page.getByText('Bose SoundLink Wireless Speaker')).toBeVisible({timeout: 30000});
     await page.getByText('Bose SoundLink Wireless Speaker').click();
 
@@ -46,9 +50,7 @@ Given('I log into AdvantageDemo', async function () {
 
     await page.getByText('LOGIN').click();
     //await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
-    //await expect(page.locator('#signInResultMessage')).toBeVisible();
-   //browser.close();
-  });
+})
 
   After(function(){
     browser.close();
