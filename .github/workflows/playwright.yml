@@ -27,6 +27,6 @@ jobs:
         retention-days: 30
     - name: Submit results to Xray
       env:
-        CLIENT_ID:    ${{ secrets.client_id }}
+        CLIENT_ID: ${{ secrets.client_id }}
         CLIENT_SECRET: ${{ secrets.client_secret }}
       run: ./import-cloud.sh
