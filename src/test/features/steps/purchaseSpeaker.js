@@ -4,7 +4,7 @@ import {expect} from '@playwright/test';
 
 
     setDefaultTimeout(60 * 1000);
-    const browser = await chromium.launch({headless:true});
+    const browser = await chromium.launch({headless:false});
     const page = await browser.newPage();
     
 Before(async function() {
@@ -49,7 +49,7 @@ Then('I am able to checkout the selected speaker', async function() {
     await password.fill('Advantage123');
 
     await page.getByText('LOGIN').click();
-    //await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
+    await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
 })
 
   After(function(){
