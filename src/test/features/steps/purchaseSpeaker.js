@@ -45,7 +45,7 @@ Given('I log into AdvantageDemo', async function () {
     await password.fill('Advantage123');
 
     await page.getByText('LOGIN').click();
-    //await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
+    await expect(page.getByText('Incorrect user name or password.')).toBeVisible();
     //await expect(page.locator('#signInResultMessage')).toBeVisible();
    //browser.close();
   });
