@@ -1,4 +1,4 @@
-@AS-14
+
 @TEST_AS-1
 Feature: User buys a speaker
 
