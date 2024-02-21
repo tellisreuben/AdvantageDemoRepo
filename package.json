@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cucumber-js test"
+    "test": "cucumber-js test -f html:output/results.html"
   },
   "keywords": [],
   "author": "",

@@ -19,11 +19,11 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Cucumber tests
       run: npm test
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: ci-report
-        path: reports/playwright-report/
+        path: output/results.html
         retention-days: 30
     - name: Submit results to Xray
       env:
