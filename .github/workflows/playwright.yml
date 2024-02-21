@@ -31,5 +31,5 @@ jobs:
         username: ${{ secrets.client_id }}
         password: ${{ secrets.client_secret }}
         testFormat: "junit"
-        testPaths: "**/output/*.json"
+        testPaths: "**/output/results.json"
         projectKey: "AS"
