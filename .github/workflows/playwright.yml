@@ -26,10 +26,7 @@ jobs:
         path: output/results.json
         retention-days: 30
     - name: Submit results to Xray
-      uses: mikepenz/xray-action@v3.0.4
-      with:
-        username: ${{ secrets.client_id }}
-        password: ${{ secrets.client_secret }}
-        testFormat: "cucumber"
-        testPaths: "**/output/results.json"
-        projectKey: "AS"
+      env:
+        CLIENT_ID:    ${{ secrets.client_id }}
+        CLIENT_SECRET: ${{ secrets.client_secret }}
+      run: ./import-cloud.sh
