@@ -26,8 +26,11 @@ jobs:
         path: output/results.json
         retention-days: 30
     - name: Submit results to Xray
-      env:
-        JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
-        JIRA_USERNAME: ${{ secrets.jira_username }}
-        JIRA_PASSWORD: ${{ secrets.jira_password }}
-      run: 'curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD -F "file=@output/results.json" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/cucumber/multipart?projectKey=AS"'
+      uses: mikepenz/xray-action@v3.0.4
+      with:
+        username: ${{ secrets.client_id }}
+        password: ${{ secrets.client_secret }}
+        testFormat: "junit"
+        testPaths: "**/output/results.json"
+        testExecKey: "AS-5"
+        projectKey: "AS"
