@@ -30,7 +30,7 @@ jobs:
       with:
         username: ${{ secrets.client_id }}
         password: ${{ secrets.client_secret }}
-        testFormat: "junit"
+        testFormat: "cucumber"
         testPaths: "**/output/results.json"
         testExecKey: "AS-5"
         projectKey: "AS"
