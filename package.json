@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cucumber-js test -f xml:output/results.xml"
+    "test": "cucumber-js test -f json:output/results.json"
   },
   "keywords": [],
   "author": "",
