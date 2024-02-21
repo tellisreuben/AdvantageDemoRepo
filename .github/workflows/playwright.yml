@@ -26,10 +26,11 @@ jobs:
         path: output/results.html
         retention-days: 30
     - name: Submit results to Xray
-      uses: mikepenz/xray-action@v2.4.5
+      uses: mikepenz/xray-action@v{latest-release}
       with:
         username: ${{ secrets.client_id }}
         password: ${{ secrets.client_secret }}
         testFormat: "junit"
         testPaths: "**/output/results.json"
+        testExecKey: "AS-5"
         projectKey: "AS"
