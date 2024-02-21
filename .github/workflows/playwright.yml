@@ -32,5 +32,5 @@ jobs:
         password: ${{ secrets.client_secret }}
         testFormat: "cucumber"
         testPaths: "**/output/results.json"
-        testExecKey: "AS-6"
+        testExecKey: "AS-9"
         projectKey: "AS"
