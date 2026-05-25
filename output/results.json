@@ -1,0 +1,97 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-buys-a-speaker;user-buys-a-speaker",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "User buys a speaker",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 36478124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I log into AdvantageDemo",
+            "match": {
+              "location": "file:/Users/susanafernandes/AdvantageDemo/AdvantageDemoRepo/src/test/features/steps/purchaseSpeaker.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4520055041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I select the \"Speakers\" option",
+            "match": {
+              "location": "file:/Users/susanafernandes/AdvantageDemo/AdvantageDemoRepo/src/test/features/steps/purchaseSpeaker.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4272524208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I am able to checkout the selected speaker",
+            "match": {
+              "location": "file:/Users/susanafernandes/AdvantageDemo/AdvantageDemoRepo/src/test/features/steps/purchaseSpeaker.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5750233667
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 662874
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AS-14",
+            "line": 1
+          },
+          {
+            "name": "@TEST_AS-1",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-buys-a-speaker",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "User buys a speaker",
+    "tags": [
+      {
+        "name": "@AS-14",
+        "line": 1
+      },
+      {
+        "name": "@TEST_AS-1",
+        "line": 2
+      }
+    ],
+    "uri": "src/test/features/buySpeakers.feature"
+  }
+]
