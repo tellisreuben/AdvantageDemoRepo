@@ -11,11 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^10.3.1",
+    "@cucumber/cucumber": "^12.9.0",
     "@playwright/test": "^1.60.0",
-    "@types/node": "^20.11.19"
+    "@types/node": "*"
   },
   "dependencies": {
-    "chai": "^5.1.0"
+    "chai": "^6.2.2"
   }
 }
