@@ -1,10 +1,12 @@
 {
   "name": "advantagedemorepo",
   "version": "1.0.0",
-  "description": "This is a demo code. This will demonstrate how to connect Xray Cucumber to an automation tool using tools like Jenkins for CI/CD We have used the Playwright automation tool for this purpose",
+  "description": "This is a demo code. This will demonstrate how to connect Xray Cucumber to an automation tool using Github Action for CI/CD. I have used the Playwright automation tool for this purpose",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "install-deps": "npm install",
+    "setup": "npm install && npm run build",
     "test": "npx cucumber-js test -f html:output/html-formatter.html -f json:output/results.json"
   },
   "keywords": [],
